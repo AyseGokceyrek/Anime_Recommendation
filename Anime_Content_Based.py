@@ -9,10 +9,10 @@ pd.set_option('display.expand_frame_repr', False)
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-
-# 1. TF-IDF Matrisinin Oluşturulması
-# 2. Cosine Similarity Matrisinin Oluşturulması
-# 3. Benzerliklere Göre Önerilerin Yapılması
+# STEPS
+# 1. TF-IDF Matrisinin Oluşturulması / Create TF-IDF matrix
+# 2. Cosine Similarity Matrisinin Oluşturulması / Cosine Similarity Matrix
+# 3. Benzerliklere Göre Önerilerin Yapılması / Recommendation acording to similarity
 
 
 df= pd.read_csv("C:/Users/Lenovo/PycharmProjects/datasets/Anime/animes.csv")
@@ -68,7 +68,7 @@ def preprocessor(df):
 preprocessor(df)
 df.shape
 #################################
-# 1. TF-IDF Matrisinin Oluşturulması
+# 1. TF-IDF Matrisinin Oluşturulması /Create TF-IDF Matrix
 #################################
 
 
@@ -85,7 +85,7 @@ vectorizer.get_feature_names()
 tfidf_matrix.toarray()
 
 #################################
-# 2. Cosine Similarity Matrisinin Oluşturulması
+# 2. Cosine Similarity Matrisinin Oluşturulması / Cosine Similarity Matrix
 #################################
 """
 Elimizdeki metinlerin benzerliklerini bulmaya çalışıyoruz. Matematiksel olarak hesaplanacak forma çevirdik. Metin vektörlerini
@@ -105,7 +105,7 @@ anime_searcher(df, name_words_contain = "Fullmetal Alchemist: Brotherhood")
 anime_searcher(df, name_words_contain = "Dragon Ball Z")
 
 #################################
-# 3. Benzerliklere Göre Önerilerin Yapılması
+# 3. Benzerliklere Göre Önerilerin Yapılması / Recommendation acording to similarity
 #################################
 
 
